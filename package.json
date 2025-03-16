@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "firebase": "^11.4.0",
-    "fs-web": "^1.0.1",
-    "http": "^0.0.1-security",
-    "serialport": "^13.0.0"
-  }
-}
