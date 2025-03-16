@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rage Quit Questionnaire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .question {
+            position: absolute;
+            font-size: 24px;
+            color: red;
+            font-weight: bold;
+            transition: all 0.5s;
+        }
+        #answerBox {
+            position: absolute;
+            padding: 10px;
+            font-size: 18px;
+            transition: all 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Try to Answer the Questions!</h1>
+    <input type="text" id="answerBox" placeholder="Type your answer here">
+    
+    <script>
+        const questions = [
+            "What is 2 + 2?",
+            "What is the capital of France?",
+            "What is 5 x 5?",
+            "What color is the sky?",
+            "How many legs does a spider have?",
+            "How many planets are in our solar system?",
+            "What is 10 / 2?",
+            "Name a primary color.",
+            "How many sides does a triangle have?",
+            "What is 3 squared?"
+        ];
+        const answers = ["4", "paris", "25", "blue", "8", "8", "5", "red", "3", "9"];
+        let usedQuestions = [];
+        let runningAway = false;
+        
+        function loadNewQuestion() {
+            if (usedQuestions.length === questions.length) {
+                usedQuestions = [];
+            }
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * questions.length);
+            } while (usedQuestions.includes(randomIndex));
+            usedQuestions.push(randomIndex);
+            
+            const newQuestion = document.createElement("p");
+            newQuestion.classList.add("question");
+            newQuestion.innerText = questions[randomIndex];
+            newQuestion.style.left = Math.random() * (window.innerWidth - 300) + "px";
+            newQuestion.style.top = Math.random() * (window.innerHeight - 100) + "px";
+            document.body.appendChild(newQuestion);
+        }
+        
+        function moveTextBox() {
+            if (runningAway) {
+                const box = document.getElementById("answerBox");
+                box.style.left = Math.random() * (window.innerWidth - 200) + "px";
+                box.style.top = Math.random() * (window.innerHeight - 100) + "px";
+            }
+        }
+        
+        document.getElementById("answerBox").addEventListener("mouseover", () => {
+            runningAway = true;
+            moveTextBox();
+        });
+
+        document.getElementById("answerBox").addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                checkAnswer();
+            }
+        });
+        
+        function checkAnswer() {
+            const userAnswer = document.getElementById("answerBox").value.toLowerCase().trim();
+            let correctIndex = usedQuestions[usedQuestions.length - 1];
+            if (userAnswer === answers[correctIndex]) {
+                alert("time for the trikshot!");
+                document.getElementById("answerBox").value = "";
+                loadNewQuestion();
+            }
+        }
+        
+        loadNewQuestion();
+        setInterval(loadNewQuestion, 1900);
+    </script>
+</body>
+</html>
