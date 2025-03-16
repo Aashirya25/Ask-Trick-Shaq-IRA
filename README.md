@@ -1,6 +1,6 @@
 # Ask-Trick-Shaq-IRA
-Shaq o'neal + Shakira
-Hello yall we officially present to you the AskTrickShaq-IRA. This fantastic piece of engineering is POINT-LESS. This machine is an integration of Arduino Leonardo, HTML and lots of exciting hardware designs. The hardware includes 2 servo motors, an LED, a button, bottle, cardboard, paper and adhesives. 
+https://youtube.com/shorts/8pO4tQOLJHU?feature=share
+Hey yall we officially present to you the AskTrickShaq-IRA. This fantastic piece of engineering is POINT-LESS. This machine is an integration of Arduino Leonardo, HTML and lots of exciting hardware designs. The hardware includes 2 servo motors, an LED, a button, bottle, cardboard, paper and adhesives. 
 
 How it works:
 
