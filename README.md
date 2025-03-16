@@ -1,8 +1,5 @@
 # Ask-Trick-Shaq-IRA
-
-[!(https://github.com/Aashirya25/Ask-Trick-Shaq-IRA/blob/main/meme.png?raw=true
-)(https://www.youtube.com/shorts/8pO4tQOLJHU)] 
-
+[![Watch the video](https://github.com/Aashirya25/Ask-Trick-Shaq-IRA/blob/main/meme.png?raw=true)](https://www.youtube.com/shorts/8pO4tQOLJHU)
 
 Hey yall we officially present to you the AskTrickShaq-IRA. This fantastic piece of engineering is POINT-LESS. This machine is an integration of Arduino Leonardo, HTML and lots of exciting hardware designs. The hardware includes 2 servo motors, a button, bottle, cardboard, paper and adhesives. 
 
